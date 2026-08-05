@@ -3,100 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delicato Café</title>
-
-<meta property="og:title" content="Delicato Café">
-<meta property="og:description" content="Cafeteria artesanal e aconchegante">
-<meta property="og:image" content="https://SEU-LINK/imagem.jpg">
-<meta property="og:type" content="website">
+  <title>Delicato Café e Açaí</title>
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
-      .footer {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 12px;
-  color: #777;
-  padding-bottom: 20px;
-}
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
-  background: #000;
-  color: #fff;
+      background: #ffffff;
+      color: #222;
+      overflow-x: hidden;
+    }
 
-  overflow-x: hidden;
-}
-.app {
-  width: 100%;
-  max-width: 430px;
-  min-height: 100vh;
-
-  background: #000;
-
-  margin: 0 auto;
-}
+    .app {
+      width: 100%;
+      max-width: 430px;
+      min-height: 100vh;
+      background: #ffffff;
+      margin: 0 auto;
+    }
 
     /* BANNER */
-.hero {
-  width: 100%;
-  aspect-ratio: 16 / 9;
+    .hero {
+      width: 100%;
+      aspect-ratio: 16 / 9;
 
-  background-image: url("./banner.png");
-  background-size: contain;
-  background-position: center top;
-  background-repeat: no-repeat;
+      background-image: url("./banner.png");
+      background-size: contain;
+      background-position: center top;
+      background-repeat: no-repeat;
 
-  position: relative;
-}
-    /* ESCURECER IGUAL AO APP */
+      position: relative;
+    }
+
+    /* Fade do banner para branco */
     .hero::after {
-  content: "";
+      content: "";
+      position: absolute;
+      inset: 0;
 
-  position: absolute;
-  inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0) 65%,
+        rgba(255,255,255,.75) 85%,
+        #fff 100%
+      );
 
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0) 65%,
-    rgba(0,0,0,0.75) 85%,
-    #000 100%
-  );
-
-  pointer-events: none;
-}
+      pointer-events: none;
+    }
 
     .container {
-  padding: 20px;
-  position: relative;
-  z-index: 2;
-}
-
-    h1 {
-      font-size: 28px;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
+      padding: 20px;
+      position: relative;
+      z-index: 2;
     }
 
     /* BOTÕES */
     .btn {
       display: block;
-      border: 1px solid #666;
-      padding: 15px;
-      margin: 12px 0;
+      background: #fff;
+      border: 1px solid #ddd;
       border-radius: 40px;
-      color: #fff;
+      padding: 16px;
+      margin: 14px 0;
       text-decoration: none;
-      transition: 0.3s;
+      color: #222;
+      font-size: 20px;
+      transition: .25s;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
     }
 
     .btn:hover {
-      background: #111;
-      border-color: #777;
+      background: #f5f5f5;
+      border-color: #bbb;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,.12);
+    }
+
+    .footer {
+      margin-top: 40px;
+      padding-bottom: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #777;
     }
   </style>
 </head>
@@ -109,25 +102,29 @@
 
     <div class="container">
 
-    <a class="btn" href="cardapio.pdf" target="_blank">
-      Cardápio
-    </a>
+      <a class="btn" href="cardapio.pdf" target="_blank">
+        Cardápio
+      </a>
 
-    <a class="btn" href="https://www.ifood.com.br/delivery/estancia-velha-rs/delicato-cafe-e-acai-centro/b8c9d756-d975-47bf-bdb4-a62c400e7421?utm_medium=share" target="_blank">
-      Delivery
-    </a>
+      <a class="btn" href="https://www.ifood.com.br/delivery/estancia-velha-rs/delicato-cafe-e-acai-centro/b8c9d756-d975-47bf-bdb4-a62c400e7421?utm_medium=share" target="_blank">
+        Delivery
+      </a>
 
-    <a class="btn" href="https://maps.google.com/?q=Rua Anita Garibaldi, 160 Centro, Estância Velha" target="_blank">
-      Como chegar?
-    </a>
+      <a class="btn" href="https://maps.google.com/?q=Rua Anita Garibaldi, 160 Centro, Estância Velha" target="_blank">
+        Como chegar?
+      </a>
 
-    <a class="btn" href="https://wa.me/5551994953141" target="_blank">
-      Entre em contato
-    </a>
+      <a class="btn" href="https://wa.me/5551994953141" target="_blank">
+        Entre em contato
+      </a>
 
-<div class="footer">
-  dev by Gugg404
-</div>
+      <div class="footer">
+        dev by Gugg404
+      </div>
+
+    </div>
+
+  </div>
 
 </body>
 </html>
